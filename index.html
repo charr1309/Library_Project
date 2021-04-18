@@ -28,9 +28,16 @@
             </thead>
             <tbody>
               <tr>
-                <td>Name of the Wind</td>
-                <td>Patrick Rothfuss</td>
                 <td>
+                  <label for="title"></label>
+                  <input type="text" id="title" name="title" placeholder="Title">
+                </td>
+                <td>
+                  <label for="author"></label>
+                  <input type="text" id="author" name="author" placeholder="Author">
+                </td>
+                <td>
+                  <label for="read"></label>
                   <input
                     type="checkbox"
                     name="read"
@@ -39,7 +46,12 @@
                     disabled
                   />
                 </td>
+                <td>
+                  <button id="addBook">Add New Book</button>
+                </td>
+                
               </tr>
+              
             </tbody>
           </table>
         </div>
