@@ -4,15 +4,15 @@ console.log("Hello World!\n==========\n");
 console.log("PROJECT:\n==========\n");
 class Book {
     constructor(Title, Author, Read){
-        this.Title;
-        this.Author;
-        this.Read;
+        this.Title = Title;
+        this.Author = Author;
+        this.Read = Read;
     }
 }
 class Library extends Book{
     constructor(bookCount, books,){
-        this.bookCount;
-        this.books;
+        this.bookCount = bookCount;
+        this.books = books;
     }
     markRead(checkbox, id){
         for(id in books);
