@@ -59,4 +59,5 @@ class Library extends Book{
     
     
     addBook = document.getElementById("addBook").addEventListener("click", addBook());
+    removeBook = document.getElementById("removeBook").addEventListener("click", removeBook());
 
