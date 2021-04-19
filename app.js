@@ -24,9 +24,9 @@ class Library extends Book{
             }
     }
     addBook(){
-        const title = document.getElementsByTagName("title");
-        const author = document.getElementsByTagName("author");
-        const read = document.getElementsById("readLibraryCheckbox.value");
+        const title = document.getElementsByTagName("title").value;
+        const author = document.getElementsByTagName("author").value;
+        const read = document.getElementsById("readLibraryCheckbox").value;
         const tbody = document.getElementsByTagName("tbody");
         
         }   
@@ -36,7 +36,7 @@ class Library extends Book{
              newTitle = document.createElement("td");
              newAuthor = document.createElement("td");
              newRead = document.createElement("td");
-            let checkbox = document.createElement("input")
+             checkbox = document.createElement("input");
                 checkbox.type = "checkbox";
                 checkbox.name = "read";
                 checkbox.value = read;
