@@ -11,6 +11,7 @@ class Book {
 }
 class Library extends Book{
     constructor(bookCount, books,){
+        super(Title, Author, Read);
         this.bookCount = bookCount;
         this.books = books;
     }
@@ -30,11 +31,11 @@ class Library extends Book{
         
         }   
 
-        newBook = new Book("title", "author", "read"){
-            const newRow = document.createElement("tr");
-            const newTitle = document.createElement("td");
-            const newAuthor = document.createElement("td");
-            const newRead = document.createElement("td");
+        newBook = new Book("title", "author", "read");
+             newRow = document.createElement("tr");
+             newTitle = document.createElement("td");
+             newAuthor = document.createElement("td");
+             newRead = document.createElement("td");
             let checkbox = document.createElement("input")
                 checkbox.type = "checkbox";
                 checkbox.name = "read";
