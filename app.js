@@ -38,16 +38,16 @@ class Library extends Book{
              newRead = document.createElement("td");
              checkbox = document.createElement("input");
                 checkbox.type = "checkbox";
-                checkbox.name = "read";
-                checkbox.value = read;
+                checkbox.name = "name";
+                checkbox.id = "id";
             newTitle.append(title);
             newAuthor.append(author);
             newRead.append(checkbox);
             newRow.append(newTitle,newAuthor,newRead);
             tbody.append(newRow);
             bookCount++;
-        }    
-        removeBook(id){
+            
+        removeBook(id);
             index = 1;
             for(id in books);
                 if(book.id == id){
@@ -55,7 +55,7 @@ class Library extends Book{
                 }else {
                     index++;
                 }   
-        }
+        
         
     
     
