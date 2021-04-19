@@ -9,56 +9,58 @@ class Book {
         this.Read = Read;
     }
 }
-class Library extends Book{
-    constructor(bookCount, books,){
-        super(Title, Author, Read);
+class Library {
+    constructor(bookCount, books){
         this.bookCount = bookCount;
         this.books = books;
+        
     }
     markRead(checkbox, id){
-        for(id in books);
+        for(let book of books){
             if(book.id == id){
                 book.read = true;
                 checkbox = true;
                 checkbox.disabled = true;
             }
+        }
     }
-    addBook(){
-        const title = document.getElementsByTagName("title").value;
-        const author = document.getElementsByTagName("author").value;
-        const read = document.getElementsById("readLibraryCheckbox").value;
-        const tbody = document.getElementsByTagName("tbody");
-        
-        }   
 
-        newBook = new Book("title", "author", "read");
-             newRow = document.createElement("tr");
-             newTitle = document.createElement("td");
-             newAuthor = document.createElement("td");
-             newRead = document.createElement("td");
-             checkbox = document.createElement("input");
+    addBook(){
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const read = document.getElementById("readLibraryCheckbox").value;
+        const tbody = document.getElementByTagName("tbody");
+
+             const newBook = new Book(title, author, read);
+             this.books.push(newBook);
+             const newRow = document.createElement("tr");
+             const newTitle = document.createElement("td");
+             const newAuthor = document.createElement("td");
+             const newRead = document.createElement("td");
+             const checkbox = document.createElement("input");
                 checkbox.type = "checkbox";
                 checkbox.name = "name";
                 checkbox.id = "id";
-            newTitle.append(title);
-            newAuthor.append(author);
+            newTitle.textContent = title;
+            newAuthor.textContent = author;
+            checkbox.checked = read;
             newRead.append(checkbox);
             newRow.append(newTitle,newAuthor,newRead);
             tbody.append(newRow);
             bookCount++;
-            
-        removeBook(id);
-            index = 1;
-            for(id in books);
+    }   
+        removeBook(id){
+            index = 0;
+            for(let book in books){
                 if(book.id == id){
                     books.splice(index, 1,);
                 }else {
                     index++;
                 }   
-        
-        
+            }
+        }
     
-    
+}
     addBook = document.getElementById("addBook").addEventListener("click", addBook());
     removeBook = document.getElementById("removeBook").addEventListener("click", removeBook());
 
